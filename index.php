@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Responder en Telegram
     if ($chat_id) {
-        $api_url = "https://api.telegram.org/bot5314245563:AAGyGdtZSxqUD3MTb7NceBixhRPo14iWkQM/sendMessage";
+        $api_url = "https://api.telegram.org/8612899836:AAHRHoRTNe1pX1fwH7mS2N9TkgnMPzMV-Wc/sendMessage";
         $data = [
             'chat_id' => $chat_id,
             'text' => $response
@@ -161,8 +161,8 @@ if (!class_exists('Telegram') || !class_exists('CurlX')) {
 }
 
 // Configuración del bot
-$botToken = "5314245563:AAGyGdtZSxqUD3MTb7NceBixhRPo14iWkQM"; // Token del bot
-$Mi_Id = "5148767495"; // ID del propietario
+$botToken = "8612899836:AAHRHoRTNe1pX1fwH7mS2N9TkgnMPzMV-Wc"; // Token del bot
+$Mi_Id = "8231341157"; // ID del propietario
 $telegram = new Telegram($botToken);
 
 // Función para verificar si el usuario es el propietario
