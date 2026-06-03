@@ -17,10 +17,10 @@ ignore_user_abort(true);
 // flush();
 
 // Healthcheck para Railway
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    echo "OK";
-    exit;
-}
+//if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    //echo "OK";
+   // exit;
+//}
 
 // Webhook de Telegram
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
