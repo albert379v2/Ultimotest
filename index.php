@@ -33,12 +33,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Detectar comando (ej: /an, /pp, /rt, etc.)
     if (preg_match('/^\/(\w+)/', $message, $matches)) {
         $cmd = strtolower($matches[1]);
+		file_put_contents(
+			'php://stderr',
+			"CMD DETECTADO: $cmd\n",
+			FILE_APPEND
+		);
+		
         $gateway_paths = [
             __DIR__ . "/Gateway/Free/$cmd.php",
             __DIR__ . "/Gateway/CCN/$cmd.php",
             __DIR__ . "/Gateway/CCN CHARGED/$cmd.php",
             __DIR__ . "/Gateway/mass/$cmd.php"
         ];
+		file_put_contents(
+			'php://stderr',
+			print_r($gateway_paths, true),
+			FILE_APPEND
+		);
         $found = false;
         foreach ($gateway_paths as $path) {
             if (file_exists($path)) {
