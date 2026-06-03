@@ -19,7 +19,7 @@ ignore_user_abort(true);
 // Healthcheck para Railway
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     echo "OK";
-    //exit;
+    exit;
 }
 
 // Webhook de Telegram
