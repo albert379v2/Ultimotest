@@ -183,24 +183,6 @@ function cleanData($input) {
 }
 
 
-function is_valid_year($ano) {
-    if (strlen($ano) == 4 || strlen($ano) == 2) {
-        if ($ano >= 23 && $ano <= 40 || $ano >= 2023 && $ano <= 2040) return true;
-        return false;
-    } else {
-    return false;
-}
-}
-
-function Is_ValidMes($mes) {
-    if (strlen($mes) <= 2) {
-        if ($mes >= 01 && $mes <= 12) return true;
-        return false;
-    } else {
-        return false;
-    }
-}
-
 function TypeCard($input) {
     if($input[0] >= 3 && $input[0] <= 6) return true;
         return false;
