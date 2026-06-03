@@ -17,10 +17,10 @@ ignore_user_abort(true);
 // flush();
 
 // Healthcheck para Railway
-//if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-   // echo "OK";
-   // exit;
-//}
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    echo "OK";
+    exit;
+}
 
 // Webhook de Telegram
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Responder en Telegram
     if ($chat_id) {
-        $api_url = "https://api.telegram.org/bot8612899836:AAHRHoRTNe1pX1fwH7mS2N9TkgnMPzMV-Wc/sendMessage";
+        $api_url = "https://api.telegram.org/8612899836:AAHRHoRTNe1pX1fwH7mS2N9TkgnMPzMV-Wc/sendMessage";
         $data = [
             'chat_id' => $chat_id,
             'text' => $response
