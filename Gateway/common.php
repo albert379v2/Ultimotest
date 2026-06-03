@@ -7,14 +7,14 @@ class CurlX {
 }
 
 // Funciones auxiliares y parser universal
-function cleanData($input) {
-    $input = str_replace(['CVV2', 'cvv2'], ' ', $input);
-    $input = preg_replace("/\r|\n/", ' ', $input);
-    $input = preg_replace("/[^0-9]/", ' ', $input);
-    $input = preg_replace('/\s+/', ' ', $input);
-    $input = trim($input, ' ');
-    return $input;
-}
+//function cleanData($input) {
+   // $input = str_replace(['CVV2', 'cvv2'], ' ', $input);
+   // $input = preg_replace("/\r|\n/", ' ', $input);
+ //   $input = preg_replace("/[^0-9]/", ' ', $input);
+//    $input = preg_replace('/\s+/', ' ', $input);
+ //   $input = trim($input, ' ');
+  //  return $input;
+//}
 
 function Parser1($input) {
     $input = cleanData($input);
