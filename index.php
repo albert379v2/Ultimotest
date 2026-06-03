@@ -52,24 +52,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		);
         $found = false;
         foreach ($gateway_paths as $path) {
-			file_put_contents(
-				'php://stderr',
-				"CHECKING: $path => " . (file_exists($path) ? "YES" : "NO") . PHP_EOL,
-				FILE_APPEND
-			);
-			if (file_exists($path)) {
-				file_put_contents(
-					'php://stderr',
-					"FOUND: $path" . PHP_EOL,
-					FILE_APPEND
-				);
-				ob_start();
-				include $path;
-				$response = ob_get_clean();
-				$found = true;
-				break;
-			}
-		}
+            if (file_exists($path)) {
+                ob_start();
+                include $path;
+                $response = ob_get_clean();
+                $found = true;
+                break;
+            }
+        }
         if (!$found) {
             $response = "❌ Comando no reconocido o gateway no disponible.";
         }
