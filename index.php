@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $cmd = strtolower($matches[1]);
         $gateway_paths = [
             __DIR__ . "/Gateway/Free/$cmd.php",
-			__DIR__ . "/Gateway/Funtcion/$cmd.php",
+			//__DIR__ . "/Gateway/Funtcion/$cmd.php",
             __DIR__ . "/Gateway/CCN/$cmd.php",
             __DIR__ . "/Gateway/CCN CHARGED/$cmd.php",
             __DIR__ . "/Gateway/mass/$cmd.php"
